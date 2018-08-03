@@ -1,0 +1,8 @@
+{
+    "default": {
+        "connectionString": "postgresql://developer:d3v3l0p3r@10.1.0.33:5432/ecalisan_dev",
+        "siteCode": "ecalisan",
+        "appCode": "00ee457d-3d2e-a07f-e6b8-937b3ddf6ba1",
+        "dbCode": "ecalisan"
+    }
+}

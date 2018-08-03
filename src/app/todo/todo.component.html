@@ -1,0 +1,31 @@
+<div class="jumbotron" style="padding:25px 0px">
+  <div class="row">
+    <div class="col-sm-2">
+        <h4 class="text-center">All Notes </h4>
+    </div>
+    <div class="col-sm-2">
+        <a routerLink="/calendar"><i class="fa fa-calendar fa-2x"></i> <i class="m-l-10 fa fa-arrow-circle-right fa-2x"></i></a>
+    </div>
+  </div>
+</div>
+
+<div class="input-group">
+  <input type="text" class="form-control" #itemTitle>
+  <div class="input-group-addon hover-cursor" (click)="onAdd(itemTitle)">
+    <i class="fa fa-plus-circle fa-2x"></i>
+  </div>
+</div>
+
+<div style="margin:5px 0px">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of toDoListArray">
+      <span class="c-pointer" [class.text-success]="item.isChecked" (click)="alterCheck(item.id, !item.isChecked)">
+        <i class="fa fa-lg" [ngClass]="item.isChecked?'fa-check-circle-o':'fa-circle-thin'"></i>
+      </span>
+      {{item.title}}
+      <span class="c-pointer text-danger pull-right" (click)="onDelete(item.id)">
+        <i class="fa fa-trash-o fa-lg"></i>
+      </span>
+    </li>
+  </ul>
+</div>
